@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Flo Chmod, Folk music from Alsace, France.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Flo Chmod">
+    <meta name="robots" content="index, follow">
+    <meta property="og:description" content="Flo Chmod, Folk music from Alsace, France.">
+    <meta property="og:image" content="https://res.cloudinary.com/dozkjqgrg/image/upload/v1708952308/FloChmod/flochmod_og.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://res.cloudinary.com/dozkjqgrg/image/upload/v1708945506/FloChmod/favicon.ico" type="image/x-icon">
+    <title>Flo Chmod - Folk Music from Alsace, FR</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ultra:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+            <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGQ9F6M2FR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LGQ9F6M2FR');
+    </script>
+</head>
+<body>
+
+    <video autoplay muted loop playsinline id="background-video" class="blur-transition">
+        <source src="https://res.cloudinary.com/dozkjqgrg/video/upload/v1708624908/FloChmod/FloChmod.mp4" type="video/mp4">
+        <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+            const video = document.getElementById("background-video");
+
+            video.classList.add("blurred");
+            setTimeout(() => {
+                video.classList.remove("blurred");
+            }, 1500);
+            
+            document.addEventListener("mousemove", (event) => {
+                const mouseX = event.clientX;
+                const mouseY = event.clientY;
+
+                const header = document.getElementById("movable-header");
+                const rotateX = (mouseY / window.innerHeight - 0.5) * 30;
+                const rotateY = (mouseX / window.innerWidth - 0.5) * 30;
+
+                header.style.transform = `translate(-50%, -50%) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+        });
+        </script>
+    </video>
+
+    <nav class="corner-menu">
+        <div class="social-buttons">
+            <a href="https://facebook.com/flochmodfolk" class="social-button" target="_blank"><img src="https://res.cloudinary.com/dozkjqgrg/image/upload/v1708945506/FloChmod/facebook-icon.svg" alt="Facebook"></a>
+            <a href="https://instagram.com/flo_chmod" class="social-button" target="_blank"><img src="https://res.cloudinary.com/dozkjqgrg/image/upload/v1708945506/FloChmod/instagram-icon.svg" alt="Instagram"></a>
+            <a href="https://flochmod.bandcamp.com" class="social-button" target="_blank"><img src="https://res.cloudinary.com/dozkjqgrg/image/upload/v1708945506/FloChmod/bandcamp-icon.svg" alt="Bandcamp"></a>
+        </div>
+        <div class="top-right"><a href="shows">Shows</a></div>
+        <div class="bottom-left"><a href="listen">Listen</a></div>
+        <div class="bottom-right"><a href="mailto:flochmod.booking@gmail.com">Contact</a></div>
+    </nav>
+
+    <h1 id="movable-header"> Flo Chmod </h1>
+</body>
+</html>
